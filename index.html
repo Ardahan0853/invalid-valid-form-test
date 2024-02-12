@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form action="">
+        <label for="email">email</label>
+        <input type="email" name="USER_email" id="email" required onfocusout="checkIsOkey(event)">
+        <label for="country">country</label>
+        <input type="text" name="USER_country" id="country" onfocusout="checkIsOkey(event)" required>
+        <label for="zipcode">zipcode</label>
+        <input type="number" name="USER_zipcode" id="zipcode" pattern="^\d{5,5}(-\d{4,4})?" onfocusout="checkIsOkey(event)" required min="1" max="99999">
+        <label for="password">password</label>
+        <input type="password" name="USER_password" id="password" onKeyPress="edValueKeyPress()" onKeyUp="edValueKeyPress()" onfocusout="edValueKeyPressConfirm()" required>
+        <label for="passwordConfirm">confirm password</label>
+        <input type="password" name="USER_password_confirm" id="passwordConfirm" onKeyPress="edValueKeyPressConfirm()" onKeyUp="edValueKeyPressConfirm()" onfocusout="edValueKeyPressConfirm()"  required>
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>
